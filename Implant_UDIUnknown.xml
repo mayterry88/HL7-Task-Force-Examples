@@ -25,8 +25,9 @@
         </thead>
         <tbody>
           <tr>
-            <td ID="#procedureCodeTextReference1">Insertion of intracardiac pacemaker</td>
-            <td ID="#procedureSiteCodeReference1">Structure of upper chest wall</td>
+	   <!-- This example was done pre-ballot.  -->
+            <td ID="procedureCodeTextReference1">Insertion of intracardiac pacemaker</td>
+            <td ID="procedureSiteCodeReference1">Structure of upper chest wall</td>
             <td ID="implantDevice1">Cardiac pacemaker</td> 
             <td/>
             <td/>
@@ -37,8 +38,8 @@
             <td>Patient</td>
           </tr>
           <tr>
-            <td ID="#procedureCodeTextReference2">Percutaneous insertion of drug eluting stent into coronary artery using fluoroscopic guidance</td>
-            <td ID="#procedureSiteCodeReference2">Left Anterior Descending Coronary Artery</td>
+            <td ID="procedureCodeTextReference2">Percutaneous insertion of drug eluting stent into coronary artery using fluoroscopic guidance</td>
+            <td ID="procedureSiteCodeReference2">Left Anterior Descending Coronary Artery</td>
             <td ID="implantDevice2">Drug Eluting Coronary Stent (LIBERTE TAXUS 3.00 mm)</td>
             <td>Boston Scientific</td>
             <td>(01)00848486001048(11)160330(10)ABC124</td>
