@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!-- This is meant to represent multiple implants during the same procedure and where one of the procedures has an unknown UDI. -->
+  <!-- This is not necessarily an ideal modeling and other changes to transition away from procedure act may be in future -->
+  <!-- That said, this is designed for compliance with current C-CDA 1.1 & 2.1 (and MU rules) -->
+  <section>
+    <templateId root="2.16.840.1.113883.10.20.22.2.23"/>
+    <templateId root="2.16.840.1.113883.10.20.22.2.23" extension="2014-06-09"/>
+    <code code="46264-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical Equipment"/>
+    <title>Implants</title>
+    <text>
+      <table>
+        <thead>
+          <tr>
+            <th>Procedure</th>
+            <th>Area</th>
+            <th>Implant Device</th>
+            <th>Manufacturer</th>
+            <th>Device Identifier</th>
+            <th>Model</th>
+            <th>Serial Number</th>
+            <th>Lot</th>
+            <th>Date and Provider</th>
+            <th>Informant</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+	   <!-- This example was done pre-ballot.  -->
+            <td ID="procedureCodeTextReference1">Insertion of intracardiac pacemaker</td>
+            <td ID="procedureSiteCodeReference1">Structure of upper chest wall</td>
+            <td ID="implantDevice1">Cardiac pacemaker</td> 
+            <td/>
+            <td/>
+            <td/>
+            <td/>
+            <td/>
+            <td>Implanted 2012 by Winston, Harry</td>
+            <td>Patient</td>
+          </tr>
+          <tr>
+            <td ID="procedureCodeTextReference2">Percutaneous insertion of drug eluting stent into coronary artery using fluoroscopic guidance</td>
+            <td ID="procedureSiteCodeReference2">Left Anterior Descending Coronary Artery</td>
+            <td ID="implantDevice2">Drug Eluting Coronary Stent (LIBERTE TAXUS 3.00 mm)</td>
+            <td>Boston Scientific</td>
+            <td>00848486001048</td>
+            <td>Z-0068-2010</td>
+            <td>0111-066-31456</td>
+            <td>ABC124</td>
+            <td>Implanted 04/13/2016 by Fleming, Barry</td>
+            <td/>
+          </tr>
+        </tbody>
+      </table>
+    </text>
+    <!-- An example where the UDI is unknown or unavailable.  In this scenario,
+      the patient asserts that a pacemaker was inserted 5 years ago.  -->
+    <entry>
+      <procedure classCode="PROC" moodCode="EVN">
+        <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+        <!-- This a different procedure at the same facility, so the extension is different while the root is the same -->
+        <id extension="1122334455" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
+        <code code="25267002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Insertion of intracardiac pacemaker">
+          <originalText>
+            <reference value="#procedureCodeTextReference1"/> 
+          </originalText>
+        </code>
+        <!-- Procedure is completed, even though the implant is still active -->
+        <statusCode code="completed"/>
+        <effectiveTime>
+          <!-- Placed Date -->
+          <low value="2012"/>
+        </effectiveTime>
+        <targetSiteCode code="699646004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Structure of upper chest wall">
+          <originalText>
+            <reference value="#procedureSiteCodeReference1"/> 
+          </originalText>
+        </targetSiteCode>
+        <!-- The informant is identified as the patient. -->
+        <informant>
+     			<assignedEntity>
+     				<id extension="12345" root="1.2.840.114350.1.13.5552.1.7.2.12345" />
+     				<!-- the informant is the patient -->
+     				<code code="ONESELF" displayName="Self" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code" /> 
+     				<addr use="HP">
+     					<streetAddress>222 Home Street</streetAddress>
+     					<city>Anytown</city>
+     					<state>NY</state>
+     					<postalCode>10010</postalCode>
+     					<country>US</country>
+     				</addr>
+     				<telecom value="tel:(555)555-2004" use="HP" />
+     			</assignedEntity>
+     			<assignedPerson>
+     				<name>
+     					<given>PatientFirstName</given>
+     					<family>PatientLastName</family>
+     				</name>
+     			</assignedPerson>
+        </informant>
+
+		<performer typeCode="PRF"> 
+			<assignedEntity>
+				<id extension="2222222222" root="2.16.840.1.113883.4.6" />
+				<addr>
+					<streetAddressLine>123 Any Street</streetAddressLine>
+					<streetAddressLine>Suite 101</streetAddressLine>
+					<city>Anytown</city>
+					<postalCode>10010</postalCode>
+					<country>US</country>
+				</addr>
+				<telecom value="tel:+1-(555)555-1234" />
+				<assignedPerson>
+					<name>
+						<family>Harry</family>
+						<given>Winston</given>
+					</name>
+				</assignedPerson>
+			</assignedEntity>
+		</performer>
+		<participant typeCode="DEV">
+          <participantRole classCode="MANU">
+            <templateId root="2.16.840.1.113883.10.20.22.4.37"/> 
+            <id root="2.16.840.1.113883.3.3719" nullFlavor="NI" /> <!-- There is no UDI information available --> 
+            <playingDevice>
+              <code nullFlavor="OTH"> <!-- Vendor doesn't code specific device. --> 
+                <originalText>
+                  <reference value="#implantDevice1"/>
+                </originalText>
+              </code>
+            </playingDevice>
+            <scopingEntity>
+              <id root="2.16.840.1.113883.3.3719"/>  <!-- The FDA is the issuing agency as a default. -->
+            </scopingEntity>
+          </participantRole>
+        </participant>
+      </procedure>
+    </entry>
+    <entry>
+      <procedure classCode="PROC" moodCode="EVN">
+        <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+        <id extension="27456789" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
+        <code code="609153008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Percutaneous insertion of drug eluting stent into coronary artery using fluoroscopic guidance">
+          <originalText>
+            <reference value="#procedureCodeTextReference2"/> 
+          </originalText>
+        </code>
+        <!-- Procedure is completed, even though the implant is still active -->
+        <statusCode code="completed"/>
+        <effectiveTime>
+          <!-- Placed Date -->
+          <low value="20160413"/>
+        </effectiveTime>
+        <targetSiteCode code="59438005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Structure of anterior descending branch of left coronary artery">
+          <originalText>
+            <reference value="#procedureSiteCodeReference2"/> 
+          </originalText>         
+        </targetSiteCode>
+        <performer typeCode="PRF">
+          <assignedEntity>
+            <id extension="2222222222" root="2.16.840.1.113883.4.6" />
+            <addr>
+              <streetAddressLine>#456, Lincon Street</streetAddressLine>
+              <streetAddressLine>Wilson Garden</streetAddressLine>
+              <city>Colorado</city>
+              <postalCode>80203</postalCode>
+              <country>US</country>
+            </addr>
+            <telecom value="tel:+1-(859)085-0945" />
+            <assignedPerson>
+              <name>
+                <family>Barry</family>
+                <given>Fleming</given>
+              </name>
+            </assignedPerson>
+          </assignedEntity>
+        </performer>
+        <participant typeCode="DEV">
+          <participantRole classCode="MANU">
+            <templateId root="2.16.840.1.113883.10.20.22.4.37"/>
+            <id assigningAuthorityName="FDA" extension="(01)00848486001048(11)160330(10)ABC124" root="2.16.840.1.113883.3.3719"/>
+            <playingDevice>
+              <code nullFlavor="UNK">
+                <originalText>
+                  <reference value="#implantDevice2"/>
+                </originalText>
+              </code>
+            </playingDevice>
+            <!-- From Product Instance template:
+                 The scopingEntity/id should correspond to FDA or the appropriate issuing agency. -->
+            <scopingEntity>
+              <id root="2.16.840.1.113883.3.3719"/>
+            </scopingEntity>
+          </participantRole>
+        </participant>
+      </procedure>
+    </entry>
+  </section>
