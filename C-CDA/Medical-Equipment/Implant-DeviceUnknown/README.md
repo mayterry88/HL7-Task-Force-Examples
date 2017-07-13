@@ -8,7 +8,6 @@ SDWG: TBD
 SDWG C-CDA R2.1 Upgrade:  TBD
 ###C-CDA 2.1 Example:
 
-2.16.840.1.113883.10.20.22.2.23
 2.16.840.1.113883.10.20.22.2.23:2014-06-09
 
 ###Reference to full CDA sample:
