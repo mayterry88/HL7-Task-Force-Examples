@@ -24,7 +24,7 @@
 	    <th>Manufacturing Date</th>
 	    <th>Procedure</th>
             <th>Procedure Site</th>  <!-- example should include laterality if applicable -->
-	    <th>Laterality</th>  <!-- TO DO: Bring up for discussion on specifically enforcing laterality as qualifier to Procedure site. -->
+	    <th>Laterality</th>  <!-- **TO DO**: Bring up for discussion on specifically enforcing laterality as qualifier to Procedure site. -->
 	    <th>Implant Date</th>  <!-- separated out implant date -->
 	    <th>Provider Name and Organization</th>  <!-- new entry -->
             <th>Informant</th>
@@ -46,6 +46,7 @@
 	    <td ID="procedureCodeTextReference1">Insertion of intracardiac pacemaker</td>
             <td ID="procedureSiteCodeReference1">Structure of upper chest wall</td>
             <td>2012</td>
+	    <td/>  <!-- Laterality...also not in the coded section...Q: should we include this?  -->
 	    <td>Winston, Harry</td>
             <td>Patient</td>
           </tr>
