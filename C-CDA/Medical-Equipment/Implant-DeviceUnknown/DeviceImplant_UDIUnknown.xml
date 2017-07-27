@@ -58,29 +58,8 @@
             <reference value="#procedureSiteCodeReference1"/> 
           </originalText>
         </targetSiteCode>
-        <!-- The informant is identified as the patient. -->
-        <informant>
-     			<assignedEntity>
-     				<id extension="12345" root="1.2.840.114350.1.13.5552.1.7.2.12345" />
-     				<!-- the informant is the patient -->
-     				<code code="ONESELF" displayName="Self" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code" /> 
-     				<addr use="HP">
-     					<streetAddress>222 Home Street</streetAddress>
-     					<city>Anytown</city>
-     					<state>NY</state>
-     					<postalCode>10010</postalCode>
-     					<country>US</country>
-     				</addr>
-     				<telecom value="tel:(555)555-2004" use="HP" />
-     			</assignedEntity>
-     			<assignedPerson>
-     				<name>
-     					<given>PatientFirstName</given>
-     					<family>PatientLastName</family>
-     				</name>
-     			</assignedPerson>
-        </informant>
-		<performer typeCode="PRF"> 
+
+	  <performer typeCode="PRF"> 
 			<assignedEntity>
 				<id extension="2222222222" root="2.16.840.1.113883.4.6" />
 				<addr>
@@ -99,6 +78,28 @@
 				</assignedPerson>
 			</assignedEntity>
 		</performer>
+	       <!-- The informant is identified as the patient. -->
+	      <informant>
+     			<assignedEntity>
+     				<id extension="12345" root="1.2.840.114350.1.13.5552.1.7.2.12345" />
+     				<!-- the informant is the patient -->
+     				<code code="ONESELF" displayName="Self" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code" /> 
+     				<addr use="HP">
+     					<streetAddressLine>222 Home Street</streetAddressLine>
+     					<city>Anytown</city>
+     					<state>NY</state>
+     					<postalCode>10010</postalCode>
+     					<country>US</country>
+     				</addr>
+     				<telecom value="tel:(555)555-2004" use="HP" />
+				<assignedPerson>
+					<name>
+						<given>PatientFirstName</given>
+						<family>PatientLastName</family>
+					</name>
+				</assignedPerson>
+     			</assignedEntity>
+        </informant>
 		<participant typeCode="DEV">
           <participantRole classCode="MANU">
             <templateId root="2.16.840.1.113883.10.20.22.4.37"/> 
