@@ -2,6 +2,7 @@
   <!-- This is meant to represent multiple implants during the same procedure and where one of the procedures has an unknown UDI. -->
   <!-- This is not necessarily an ideal modeling and other changes to transition away from procedure act may be in future -->
   <!-- That said, this is designed for compliance with current C-CDA 1.1 & 2.1 (and MU rules) -->
+  <!-- Note: This is current state and only representative of the UDI unknown. An example of multiple implants which includes UDI unknown will be release. -->
   <section>
     <templateId root="2.16.840.1.113883.10.20.22.2.23"/>
     <templateId root="2.16.840.1.113883.10.20.22.2.23" extension="2014-06-09"/>
@@ -12,41 +13,21 @@
         <thead>
           <tr>
             <th>Device Type</th>  <!-- This is the generic name of the device.  Added to distinguish from the Device Brand -->
-	    <th>Device Brand</th> <!-- Placeholder for Brand name.  -->
-            <th>Manufacturer</th> 
-            <th>Device Identifier</th>  <!-- if the implant card created prior to the creation of UDI is provided, then this would be missing bar code or a UDI # printed -->
-            <th>Model</th>  <!-- Device Model Number.  This number is not always available. -->
-	    <th>Catalog REF</th>  <!-- an ISO number.  In some cases, the REF is the same as the Model. -->
-            <th>Serial Number</th>
-            <th>Lot</th>  <!-- Device Lot number -->
-	    <th>DIC</th>  <!-- Distinct Identification Code (aka: Donation Identification Number in GUDID). in some cases, it's the same as serial and lot number. -->
-  	    <th>Expiration Date</th>
-	    <th>Manufacturing Date</th>
 	    <th>Procedure</th>
-            <th>Procedure Site</th>  <!-- example should include laterality if applicable -->
-	    <th>Laterality</th>  <!-- **TO DO**: Bring up for discussion on specifically enforcing laterality as qualifier to Procedure site. -->
+            <th>Procedure Site</th>  
+	    <th>Laterality</th> 
 	    <th>Implant Date</th>  <!-- separated out implant date -->
-	    <th>Provider Name and Organization</th>  <!-- new entry -->
+	    <th>Provider Name and Organization</th>  
             <th>Informant</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-	   <!-- This example was done pre-ballot.  -->
             <td ID="implantDevice1">Cardiac pacemaker</td> 
- 	    <td/>  <!-- Device Brand Name -->
-            <td/>  <!-- Manufacturer -->
-            <td/>  <!-- Device Identifier -->
-            <td/>  <!-- Model -->
-            <td/>  <!-- Catalog REF -->
-            <td/>  <!-- Lot Number -->
-            <td/>  <!-- Distinct Identification Code -->
-            <td/>  <!-- Expiration Date -->
-            <td/>  <!-- Manufacturing Date -->
 	    <td ID="procedureCodeTextReference1">Insertion of intracardiac pacemaker</td>
             <td ID="procedureSiteCodeReference1">Structure of upper chest wall</td>
             <td>2012</td>
-	    <td/>  <!-- Laterality...also not in the coded section...Q: should we include this?  -->
+	    <td/>  <!-- Laterality not appropriate for this device. -->
 	    <td>Winston, Harry</td>
             <td>Patient</td>
           </tr>
