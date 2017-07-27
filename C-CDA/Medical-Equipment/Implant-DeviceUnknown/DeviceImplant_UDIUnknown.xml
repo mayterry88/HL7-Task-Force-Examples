@@ -12,7 +12,7 @@
       <table>
         <thead>
           <tr>
-            <th>Device Type</th>  <!-- This is the generic name of the device.  Added to distinguish from the Device Brand -->
+            <th>Device Type</th>  <!-- This is the generic name of the device. -->
 	    <th>Procedure</th>
             <th>Procedure Site</th>  
 	    <th>Laterality</th> 
