@@ -63,7 +63,7 @@
                 </period>
             </effectiveTime>
             <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="ORAL"/>
-            <doseQuantity value="2" unit="ml" />
+            <doseQuantity value="2" unit="mL" />
             <consumable>
                 <manufacturedProduct classCode="MANU">
                     <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
