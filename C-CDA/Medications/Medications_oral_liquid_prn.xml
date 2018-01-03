@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-    the following example to represent a medication order for 5 milliliter of Robitussin Cough and Congestion oral liquid 
-    every 4 to 6 hours prn for cough for 10 days.
+    the following example to represent a medication order for 6mg (2 milliliter of the antitussive, noscapine 3 mg/mL) 
+    oral liquid every 4 to 6 hours prn for cough for 10 days.
 -->
 
 <section>
@@ -24,13 +24,13 @@
             <tbody>
                 <tr ID="Medication_1">
                     <td>
-                        <content ID="MedicationName_1" xmlns="urn:hl7-org:v3">Dextromethorphan Hydrobromide 1 MG/ML / Guaifenesin 20 MG/ML [Robitussin Cough and Congestion]</content>
+                        <content ID="MedicationName_1" xmlns="urn:hl7-org:v3">Noscapine 3 MG/ML Oral Solution</content>
                     </td>
                     <td>
                         <content>every 4 to 6 hours prn for cough</content>
                     </td>
                     <td>
-                        <content>5 ml</content>
+                        <content>6 mg (2 mL)</content>
                     </td>
                     <td>12/21/17 - 12/31/17</td>
                     <td>Active</td>
@@ -62,17 +62,15 @@
                     <high value="6" unit="h"/>
                 </period>
             </effectiveTime>
-            <doseQuantity value="5" unit="ml" />
+            <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="ORAL"/>
+            <doseQuantity value="2" unit="ml" />
             <consumable>
                 <manufacturedProduct classCode="MANU">
+                    <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
                     <templateId root="2.16.840.1.113883.10.20.22.4.23" />
-                    <id root="9c202b40-061c-44d4-ad2b-d1b4c1064da5" extension="1016" />
+                    <id root="7482acd4-693c-4539-b0db-f21c2bf477c0" extension="1015" />
                     <manufacturedMaterial>
-                        <code code="1545782" codeSystem="2.16.840.1.113883.6.88" displayName="Dextromethorphan Hydrobromide 1 MG/ML / Guaifenesin 20 MG/ML [Robitussin Cough & Congestion]">
-                            <originalText>
-                                <reference value="MedicationName_1" />
-                            </originalText>
-                        </code>
+                        <code code="102494" codeSystem="2.16.840.1.113883.6.88" displayName="Noscapine 3 MG/ML Oral Solution" />
                     </manufacturedMaterial>
                 </manufacturedProduct>
             </consumable>
