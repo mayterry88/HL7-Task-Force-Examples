@@ -53,8 +53,8 @@
                 <high value="20171231" />  <!-- take this medication for 10 days -->
             </effectiveTime>
             <!-- This second effectiveTime represents QID from medication sig. -->
-            <!-- InstituionSpecified = "true" means that it can be given 4 times per day but need not be exactly timed to every 6 hours-->
-            <!-- InstituionSpecified = "false" would mean that timing needs to be administered exactly as structured-->
+            <!-- InstitutionSpecified = "true" means that it can be given 4 times per day but need not be exactly timed to every 6 hours-->
+            <!-- InstitutionSpecified = "false" would mean that timing needs to be administered exactly as structured-->
             <!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
             <effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
                 <period xsi:type="IVL_PQ">
