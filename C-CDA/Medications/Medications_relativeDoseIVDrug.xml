@@ -43,7 +43,7 @@
                 <reference value="#Medication_1"/>
             </text>
             <statusCode code="active" />  <!-- the medication order is currently active -->
-            <!-- for this regimen, bevacizumab will only be administered once, on Day 1, as an example scheduled for a future date.  -->
+            <!-- for this regimen, bevacizumab will only be administered once, on Day 1, as an example scheduled for a future date relative to the date of the encounter.  -->
             <effectiveTime value = "20180215" />
             <routeCode code="C38276"
                 codeSystem="2.16.840.1.113883.3.26.1.1"
@@ -57,8 +57,7 @@
                 <manufacturedProduct classCode="MANU">
                     <!-- ** Medication information ** -->
                     <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
-                    <templateId root="2.16.840.1.113883.10.20.22.4.23"
-                        extension="2014-06-09"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
                     <id root="2a620155-9d11-439e-92b3-5d9815ff3cc2"/>
                     <manufacturedMaterial>
                         <code code="1657066"
