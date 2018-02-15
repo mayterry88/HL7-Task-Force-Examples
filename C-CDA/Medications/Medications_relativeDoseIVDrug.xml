@@ -88,7 +88,7 @@
                     <!-- ** Indication ** -->
                     <templateId root="2.16.840.1.113883.10.20.22.4.19"
                         extension="2014-06-09"/>
-		    <!-- This ID should link to the problem ID entry in the problem list -->
+		    <!-- This ID may link to the problem ID entry in the problem list, if it already exists. -->
 			<id root="e63166c7-6482-4a44-83a1-37ccdbdd532b"/>
                     <code code="75321-0"
                         codeSystem="2.16.840.1.113883.6.1"
