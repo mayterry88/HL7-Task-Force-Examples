@@ -49,8 +49,8 @@
             </text>
             <statusCode code="active" />  <!-- the medication order is currently active -->
             <effectiveTime xsi:type="IVL_TS">
-                <low value="201712210000-0500"/>
-                <high value="201712302359-0500"/>  <!-- take this medication for 10 days -->
+                <low value="20171221"/>
+                <high value="20171231"/>  <!-- take this medication for 10 days -->
             </effectiveTime>
             <!-- This second effectiveTime represents QID from medication sig. -->
             <!-- InstitutionSpecified = "true" means that it can be given 4 times per day but need not be exactly timed to every 6 hours-->
