@@ -48,7 +48,6 @@
                 <reference value="#Medication_1"/>
             </text>
             <statusCode code="active" />  <!-- the medication order is currently active -->
-            <!- update timing based on C-CDA R1.1 DSTU comment #383 -->
             <effectiveTime xsi:type="IVL_TS">
                 <low value="201712210000-0500"/>
                 <high value="201712302359-0500"/>  <!-- take this medication for 10 days -->
