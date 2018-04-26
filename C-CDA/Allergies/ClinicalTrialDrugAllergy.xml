@@ -118,9 +118,9 @@
                                 <!-- This drug is a clinical trial drug not approved by FDA so there is no RxNorm code -->
                                 <code nullFlavor = "UNK"> <!-- option 1: unknown entry with reference to originalText -->
                                     <!-- <code nullFlavor="UNK" displayName="talazoparib" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm"> -->
-                                    <text>
+                                    <originalText>
                                         <reference value="#allergy1allergen"/>
-                                    </text>
+                                    </originalText>
                                 </code>
                             </playingEntity>
                         </participantRole>
@@ -138,9 +138,9 @@
                             <effectiveTime value = "20180401"/>
                             <value xsi:type="CD" code="267036007" codeSystem="2.16.840.1.113883.6.96"
                                 codeSystemName="SNOMED CT" displayName=" Dyspnea">
-                                <text>
+                                <originalText>
                                     <reference value="#allergy1reaction"/>
-                                </text>
+                                </originalText>
                             </value>
                             <entryRelationship typeCode="SUBJ" inversionInd="true">
                                 <observation classCode="OBS" moodCode="EVN">
@@ -159,6 +159,8 @@
                             </entryRelationship>
                         </observation>
                     </entryRelationship>
+                   </observation>
+            </entryRelationship>
         </act>
     </entry>
 </section>
